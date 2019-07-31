@@ -8,7 +8,7 @@ import {
     store
 } from './store';
 
-describe('test', () => {
+describe('test component', () => {
     let wrapper;
 
     beforeEach(() => {
@@ -16,12 +16,13 @@ describe('test', () => {
     });
 
     it('AppEnhanced', () => {
+ 
         act(() => {
             wrapper.find('.btn').props().onClick();
         });
 
-        wrapper.update()
+        wrapper.update();
 
-        expect(wrapper.find('.count').text()).toEqual("1")
+        expect(wrapper.find('.count').text()).toEqual("1");
     })
 });

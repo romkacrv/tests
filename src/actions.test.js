@@ -7,10 +7,17 @@ import {
 } from './actions';
 
 const mockStore = configureStore([thunk]);
-const store = mockStore();
 
-describe('test', () => {
-  it('actions', () => {
+describe('test actions', () => {
+  afterEach(() => {
+    //fetchMock.restore();
+  })
+
+  it('testAction', () => {
+    const store = mockStore({
+      count: 0
+    });
+
     const expectedAction = [{
       type: types.INCREMENT,
       payload: 1
