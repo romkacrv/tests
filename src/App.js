@@ -2,10 +2,16 @@ import React, {
   useState,
   useEffect
 } from 'react';
+
 import { connect } from 'react-redux';
+
 import {
   Width
 } from './Inc';
+
+import {
+  Reducer
+} from './Reducer';
 
 import {
   testAction
@@ -22,9 +28,7 @@ const App = (props) => {
 
   return (
     <div className="App">
-      <Width />
-      <div onClick={() => onClick(count + 1)} className="btn">click</div>
-      <div className={'count'}>{count}</div>
+      <Reducer />
     </div>
   );
 }
